@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ドイツ語 成績計算</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="title-box">
+  <h1>ドイツ語 成績計算</h1>
+</div>
+
+<div id="score-area"></div>
+
+<div class="extra">
+  <label>
+    資格試験加点（任意）
+    <input type="number" id="bonus">
+  </label>
+</div>
+
+<div class="save-area">
+  <label>
+    <input type="checkbox" id="saveOption">
+    入力値をlocalに保存する
+  </label>
+</div>
+
+<button onclick="calculate()">計算する</button>
+
+<button id="resetBtn" onclick="resetData()" style="display:none;">
+  保存データをリセット
+</button>
+
+<div class="result">
+  <p>得点合計：<span id="total">0</span> 点</p>
+  <p>満点合計：<span id="maxTotal">0</span> 点</p>
+  <p>達成率：<span id="rate">0</span> %</p>
+  <p>評価：<span id="grade">-</span></p>
+
+  <div class="remaining">
+    <p id="toS"></p>
+    <p id="toA"></p>
+  </div>
+
+  <p id="message" class="message"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
